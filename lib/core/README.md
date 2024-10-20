@@ -1,0 +1,4 @@
+# core
+
+アプリのコアとなるクラスを管理します。<br>
+例えば、FirebaseのTimestamp型とDatetime型を変換するコンバーターやアプリ全体で使用するLoggerなどを管理することが多いです。

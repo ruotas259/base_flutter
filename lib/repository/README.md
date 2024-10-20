@@ -1,0 +1,7 @@
+# repository
+
+ビジネスロジックの役割を持つクラスを管理します。<br>
+infrastructureに定義したAPIクライアントで、データをCRUDする関数を呼び出します。<br>
+Repositoryで定義した関数は、ViewModelから呼び出すようにしています。<br>
+基本的にはXxxRepositoryというabstract classを作り、別途それを実装したXxxRepositoryImplを作ることが多いです。<br>
+上記はUTのしやすさを考慮しているためです。
