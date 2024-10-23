@@ -48,7 +48,7 @@ dependencies:
   logger:
   http:
   google_fonts:
-
+  build_runner:
 
 dev_dependencies:
   flutter_test:
