@@ -1,0 +1,74 @@
+# Flavorの設定
+# flutter pub run flutter_flavorizr
+app:
+  android:
+    flavorDimensions: "flavor-type"
+
+flavors:
+  local:
+    app:
+      name: "サンプル.local"
+
+    android:
+      applicationId: "base_flutter.local"
+#      resValues:
+#        urlScheme:
+#          type: "string"
+#          value: "xxx-xxx"
+
+    ios:
+      bundleId: "base-flutter.local"
+#      variables:
+#        URL_SCHEME:
+#          value: "xxx-xxx"
+
+  dev:
+    app:
+      name: "サンプル.dev"
+
+    android:
+      applicationId: "base_flutter.dev"
+    #      resValues:
+    #        urlScheme:
+    #          type: "string"
+    #          value: "xxx-xxx"
+
+    ios:
+      bundleId: "base-flutter.dev"
+#      variables:
+#        URL_SCHEME:
+#          value: "xxx-xxx"
+
+  stg:
+    app:
+      name: "サンプル.stg"
+
+    android:
+      applicationId: "base_flutter.stg"
+    #      resValues:
+    #        urlScheme:
+    #          type: "string"
+    #          value: "xxx-xxx"
+
+    ios:
+      bundleId: "base-flutter.stg"
+#      variables:
+#        URL_SCHEME:
+#          value: "xxx-xxx"
+
+  prod:
+    app:
+      name: "サンプル"
+
+    android:
+      applicationId: "base_flutter"
+    #      resValues:
+    #        urlScheme:
+    #          type: "string"
+    #          value: "xxx-xxx"
+
+    ios:
+      bundleId: "base-flutter"
+#      variables:
+#        URL_SCHEME:
+#          value: "xxx-xxx"
