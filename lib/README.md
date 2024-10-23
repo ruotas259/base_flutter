@@ -9,11 +9,15 @@ APIがない状態において、ダミーデータを取得したい場合に�
 openapi.ymlファイルの内容を変更することで、取得する値の変更が可能です。
 
 ### OpenAPIからAPIクライアントを自動生成する
-1. infrastructureのclientフォルダ配下に、openapi.ymlファイルを格納する
-2. 以下コマンドを実行する
+1. npm環境があること(なければインストールし導入すること)
+2. openapi-generatorをインストール
 <br>
-`openapi-generator generate -i ./lib/infrastructure/client/openapi.yml -g dart -o ./lib/infrastructure/client`
-3. clientフォルダ配下にAPIクライアントが自動生成される
+`npm install @openapitools/openapi-generator-cli -g`
+3. infrastructureのclientフォルダ配下に、openapi.ymlファイルを格納する
+4. 以下コマンドを実行する
+<br>
+`openapi-generator-cli generate -i ./lib/infrastructure/client/openapi.yml -g dart -o ./lib/infrastructure/client`
+5. clientフォルダ配下にAPIクライアントが自動生成される
 
 ### モックサーバー導入手順
 1. npm環境があること(なければインストールし導入すること)

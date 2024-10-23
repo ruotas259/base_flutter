@@ -1,0 +1,78 @@
+openapi: 3.0.0
+info:
+  title: Sample API
+  description: これはサンプルのAPIです。
+  version: 1.0.0
+paths:
+  /users:
+    get:
+      summary: ユーザーのリストを取得
+      responses:
+        '200':
+          description: 正常にユーザーのリストを取得しました。
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: integer
+                    name:
+                      type: string
+                    email:
+                      type: string
+    post:
+      summary: 新しいユーザーを作成
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                email:
+                  type: string
+      responses:
+        '201':
+          description: 新しいユーザーが作成されました。
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  email:
+                    type: string
+  /users/{id}:
+    get:
+      summary: 特定のユーザーを取得
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: ユーザーのID
+          schema:
+            type: integer
+      responses:
+        '200':
+          description: ユーザー情報を取得しました。
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  email:
+                    type: string
+        '404':
+          description: ユーザーが見つかりませんでした。
