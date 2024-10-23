@@ -23,7 +23,7 @@ Future<void> main() async {
 
   // フレーバーで変わる値の定義を追加する
   FlavorConfig(variables: {
-    "AUTH_BASE_URL": "xxx.xxx.stg",
+    "BASE_URL": "xxx.xxx.stg",
   });
 
   F.appFlavor = Flavor.stg;
