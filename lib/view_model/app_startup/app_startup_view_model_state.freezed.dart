@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 
 /// @nodoc
 mixin _$AppStartupViewModelState {
-  bool get isLoading => throw _privateConstructorUsedError;
+  Result get result => throw _privateConstructorUsedError;
 
   /// Create a copy of AppStartupViewModelState
   /// with the given fields replaced by the non-null parameter values.
@@ -31,7 +31,7 @@ abstract class $AppStartupViewModelStateCopyWith<$Res> {
           $Res Function(AppStartupViewModelState) then) =
       _$AppStartupViewModelStateCopyWithImpl<$Res, AppStartupViewModelState>;
   @useResult
-  $Res call({bool isLoading});
+  $Res call({Result result});
 }
 
 /// @nodoc
@@ -50,13 +50,13 @@ class _$AppStartupViewModelStateCopyWithImpl<$Res,
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isLoading = null,
+    Object? result = null,
   }) {
     return _then(_value.copyWith(
-      isLoading: null == isLoading
-          ? _value.isLoading
-          : isLoading // ignore: cast_nullable_to_non_nullable
-              as bool,
+      result: null == result
+          ? _value.result
+          : result // ignore: cast_nullable_to_non_nullable
+              as Result,
     ) as $Val);
   }
 }
@@ -70,7 +70,7 @@ abstract class _$$AppStartupViewModelStateImplCopyWith<$Res>
       __$$AppStartupViewModelStateImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call({bool isLoading});
+  $Res call({Result result});
 }
 
 /// @nodoc
@@ -88,13 +88,13 @@ class __$$AppStartupViewModelStateImplCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? isLoading = null,
+    Object? result = null,
   }) {
     return _then(_$AppStartupViewModelStateImpl(
-      isLoading: null == isLoading
-          ? _value.isLoading
-          : isLoading // ignore: cast_nullable_to_non_nullable
-              as bool,
+      result: null == result
+          ? _value.result
+          : result // ignore: cast_nullable_to_non_nullable
+              as Result,
     ));
   }
 }
@@ -102,15 +102,15 @@ class __$$AppStartupViewModelStateImplCopyWithImpl<$Res>
 /// @nodoc
 
 class _$AppStartupViewModelStateImpl implements _AppStartupViewModelState {
-  const _$AppStartupViewModelStateImpl({this.isLoading = false});
+  const _$AppStartupViewModelStateImpl({this.result = Result.none});
 
   @override
   @JsonKey()
-  final bool isLoading;
+  final Result result;
 
   @override
   String toString() {
-    return 'AppStartupViewModelState(isLoading: $isLoading)';
+    return 'AppStartupViewModelState(result: $result)';
   }
 
   @override
@@ -118,12 +118,11 @@ class _$AppStartupViewModelStateImpl implements _AppStartupViewModelState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$AppStartupViewModelStateImpl &&
-            (identical(other.isLoading, isLoading) ||
-                other.isLoading == isLoading));
+            (identical(other.result, result) || other.result == result));
   }
 
   @override
-  int get hashCode => Object.hash(runtimeType, isLoading);
+  int get hashCode => Object.hash(runtimeType, result);
 
   /// Create a copy of AppStartupViewModelState
   /// with the given fields replaced by the non-null parameter values.
@@ -136,11 +135,11 @@ class _$AppStartupViewModelStateImpl implements _AppStartupViewModelState {
 }
 
 abstract class _AppStartupViewModelState implements AppStartupViewModelState {
-  const factory _AppStartupViewModelState({final bool isLoading}) =
+  const factory _AppStartupViewModelState({final Result result}) =
       _$AppStartupViewModelStateImpl;
 
   @override
-  bool get isLoading;
+  Result get result;
 
   /// Create a copy of AppStartupViewModelState
   /// with the given fields replaced by the non-null parameter values.
