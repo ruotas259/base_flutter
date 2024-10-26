@@ -97,3 +97,7 @@ OSSのライセンス利用ページは、[flutter_oss_license](https://pub.dev/
 
 `fvm flutter pub run flutter_oss_licenses:generate.dart -o /lib/gen/oss_licenses.dart`
 
+## DeployGateへのアップロード
+以下コマンドを実行する。
+<br>
+`curl --url "https://deploygate.com/api/users/${OWNER_NAME}/apps" -H "Authorization: Bearer ${API_TOKEN}" -X POST -F "file=@build/app/outputs/flutter-apk/app-dev-debug.apk"`
