@@ -119,7 +119,7 @@ extension LogExtension on Logger {
         ? '$methodName) $formattedPrefix'
         : '$methodName) $formattedPrefix : $message';
 
-    if (isDebugOutput()) {
+    if (isDebugOutput() && kReleaseMode) {
       debugPrint(logMessage);
     } else {
       log(level, logMessage);
